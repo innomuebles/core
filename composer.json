@@ -1,6 +1,6 @@
 {
 	"name": "innomuebles/core"
-	,"version": "0.0.2"
+	,"version": "0.0.3"
 	,"description": "A custom module for innomuebles.com (Magento 2)"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/innomuebles/core"

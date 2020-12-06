@@ -4,13 +4,12 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
 >
 <!-- 2020-12-07
-«The XML in file "vendor/magento/module-inventory-catalog/etc/communication.xml" is invalid:
+1) «The XML in file "vendor/magento/module-inventory-catalog/etc/communication.xml" is invalid:
 Element 'topic', attribute 'is_synchronous': The attribute 'is_synchronous' is not allowed.»:
-https://github.com/innomuebles/m2/issues/1 -->
-	<type name='Magento\Framework\Config\ValidationStateInterface'>
-		<plugin
-			name='InnoMuebles\Core\Plugin\Magento\Framework\Config\ValidationStateInterface'
-			type='InnoMuebles\Core\Plugin\Magento\Framework\Config\ValidationStateInterface'
-		/>
-	</type>
+https://github.com/innomuebles/m2/issues/1
+2) A plugin does not work here. -->
+	<preference
+		for='Magento\Framework\Config\ValidationStateInterface'
+		type='InnoMuebles\Core\Preference\Magento\Framework\App\Arguments\ValidationState'
+	/>
 </config>
