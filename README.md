@@ -1,11 +1,12 @@
 A custom module for [dev.innomuebles.com/magentonew](https://dev.innomuebles.com/magentonew) (Magento 2)..  
 
 ## How to install
-```             
+``` 
+COMPOSER=php -d memory_limit=-1 /opt/cpanel/composer/bin/composer            
 bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
-php -d memory_limit=-1 /usr/bin/composer require --ignore-platform-reqs --prefer-source coyoteaccessories/core:*
+$COMPOSER require innomuebles/core:*
 bin/magento setup:upgrade
 bin/magento cache:enable
 rm -rf var/di var/generation generated/*
@@ -16,12 +17,13 @@ bin/magento maintenance:disable
 ```
 
 ## How to upgrade
-```              
+```      
+COMPOSER=php -d memory_limit=-1 /opt/cpanel/composer/bin/composer        
 bin/magento maintenance:enable
-php -d memory_limit=-1 /usr/bin/composer remove coyoteaccessories/core
+$COMPOSER remove coyoteaccessories/core
 rm -rf composer.lock
-composer clear-cache
-php -d memory_limit=-1 /usr/bin/composer require --ignore-platform-reqs --prefer-source coyoteaccessories/core:*
+$COMPOSER clear-cache
+$COMPOSER require innomuebles/core:*
 bin/magento setup:upgrade
 bin/magento cache:enable
 rm -rf var/di var/generation generated/*
