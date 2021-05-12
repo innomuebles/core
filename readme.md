@@ -2,7 +2,7 @@ A custom module for [dev.innomuebles.com/magentonew](https://dev.innomuebles.com
 
 ## How to install
 ``` 
-COMPOSER='php -d memory_limit=-1 /opt/cpanel/composer/bin/composer'            
+COMPOSER='php -d memory_limit=-1 /home/innomueb/composer'           
 bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
@@ -18,7 +18,7 @@ bin/magento maintenance:disable
 
 ## How to upgrade
 ```      
-COMPOSER='php -d memory_limit=-1 /opt/cpanel/composer/bin/composer'        
+COMPOSER='php -d memory_limit=-1 /home/innomueb/composer'          
 bin/magento maintenance:enable
 $COMPOSER remove innomuebles/core
 rm -rf composer.lock
